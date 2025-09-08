@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Palette, Clipboard } from "lucide-react";
+import { Palette } from "lucide-react";
 import { getHexColorCode } from "../utils/colorUtils";
+import GradientCard from "./GradientCard";
 
 export default function GradientGenerator() {
     const [num, setNum] = useState(12);
@@ -16,11 +17,6 @@ export default function GradientGenerator() {
         } else {
             return `radial-gradient(circle, ${color1}, ${color2})`;
         }
-    };
-
-    const handleCopy = (gradient) => {
-        navigator.clipboard.writeText(gradient);
-        alert("Gradient copied!");
     };
 
     return (
@@ -54,20 +50,7 @@ export default function GradientGenerator() {
                 <div className="grid grid-cols-4 gap-4">
                     {Array.from({ length: num }).map((_, index) => {
                         const gradient = generateHexGradient();
-                        return (
-                            <div
-                                key={index}
-                                className="h-[180px] rounded-xl relative shadow-md"
-                                style={{ background: gradient }}
-                            >
-                                <button
-                                    onClick={() => handleCopy(gradient)}
-                                    className="bg-black/50 hover:bg-black text-white rounded absolute bottom-3 right-3 px-2 py-1.5 text-xs font-medium flex items-center gap-1"
-                                >
-                                    <Clipboard className="w-3 h-3"/> Copy
-                                </button>
-                            </div>
-                        );
+                        return <GradientCard key={index} gradient={gradient}/>;
                     })}
                 </div>
             </div>
