@@ -9,7 +9,7 @@ export default function GradientCard({ gradient }) {
 
     return (
         <div
-            className="h-[180px] rounded-xl relative shadow-md"
+            className="h-[180px] rounded-md relative shadow-md"
             style={{ background: gradient }}
         >
             <button

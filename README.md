@@ -1,12 +1,57 @@
-# React + Vite
+# 🎨 GradienCraft - Generate Custom Gradient Colors
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive React app to generate random linear and radial gradients. You can choose the number of gradients, switch between gradient types, and regenerate fresh palettes with a click.
 
-Currently, two official plugins are available:
+## 📸 Screenshots
+![img.png](img.png)
+## ✨ Features
+* Generate random linear and radial gradients
+* Adjustable number of palettes
+* Random gradient angles for linear mode 
+* Responsive layout (works on desktop, tablet, and mobile)
+* Copy gradient styles easily for use in your projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
+* React 19 
+* Tailwind CSS for styling 
+* Lucide React for icons
+* React Toastify for toast notifications
+* Vite for fast development
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+── src/
+    ├── components/
+    │   ├── GradientGenerator.jsx
+    │   └── GradientCard.jsx
+    ├── utils/
+    │   └── colorUtils.js 
+    ├── App.jsx
+    └── main.jsx
+```
+
+## ⚡ Getting Started
+1. Clone the repo
+```bash
+git clone https://github.com/yourusername/gradient-generator.git
+cd gradient-generator 
+```
+2. Install dependencies
+```bash
+npm install 
+```
+3. Run the development server
+```bash
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+## 🔮 Future Improvements
+* Add ability to copy gradient code with one click
+* Support for multiple color stops
+* Save favorite gradients to local storage
+
+## 📝 License
+This project is licensed under the MIT License. Feel free to use, modify, and share.
