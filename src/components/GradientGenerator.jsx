@@ -10,14 +10,22 @@ export default function GradientGenerator() {
 
     const generateGradients = useCallback(() => {
         const newGradients = Array.from({ length: num }).map(() => {
-            const color1 = getHexColorCode();
-            const color2 = getHexColorCode();
             const degree = Math.floor(Math.random() * 360);
 
-            if (type === "linear") {
-                return `linear-gradient(${degree}deg, ${color1}, ${color2})`;
-            } else {
-                return `radial-gradient(circle, ${color1}, ${color2})`;
+            if (type === "conic") {
+                const colorCount = Math.floor(Math.random() * 3) + 3;
+                const colors = Array.from({ length: colorCount }).map(() => getHexColorCode());
+                const colorStops = colors.join(", ");
+                return `conic-gradient(from ${degree}deg, ${colorStops})`;
+            }else{
+                const color1 = getHexColorCode();
+                const color2 = getHexColorCode();
+
+                if (type === "linear") {
+                    return `linear-gradient(${degree}deg, ${color1}, ${color2})`;
+                } else {
+                    return `radial-gradient(circle, ${color1}, ${color2})`;
+                }
             }
         });
         setGradients(newGradients);
@@ -52,6 +60,7 @@ export default function GradientGenerator() {
                         >
                             <option value="linear">Linear</option>
                             <option value="radial">Radial</option>
+                            <option value="conic">Conic</option>
                         </select>
                         <button
                             onClick={generateGradients}
