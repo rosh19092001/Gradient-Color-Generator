@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Palette, SwatchBook } from "lucide-react";
-import { getHexColorCode } from "../utils/colorUtils";
+import { getHexColorCode, rgbToName, hexToRgb } from "../utils/colorUtils";
 import GradientCard from "./GradientCard";
 
 export default function GradientGenerator() {
@@ -11,23 +11,29 @@ export default function GradientGenerator() {
     const generateGradients = useCallback(() => {
         const newGradients = Array.from({ length: num }).map(() => {
             const degree = Math.floor(Math.random() * 360);
+            let gradient = "";
+            let colors = [];
 
             if (type === "conic") {
                 const colorCount = Math.floor(Math.random() * 3) + 3;
-                const colors = Array.from({ length: colorCount }).map(() => getHexColorCode());
-                const colorStops = colors.join(", ");
-                return `conic-gradient(from ${degree}deg, ${colorStops})`;
-            }else{
+                colors = Array.from({ length: colorCount }).map(() => getHexColorCode());
+                gradient = `conic-gradient(from ${degree}deg, ${colors.join(", ")})`;
+            } else {
                 const color1 = getHexColorCode();
                 const color2 = getHexColorCode();
+                colors = [color1, color2];
 
-                if (type === "linear") {
-                    return `linear-gradient(${degree}deg, ${color1}, ${color2})`;
-                } else {
-                    return `radial-gradient(circle, ${color1}, ${color2})`;
-                }
+                gradient = type === "linear"
+                    ? `linear-gradient(${degree}deg, ${color1}, ${color2})`
+                    : `radial-gradient(circle, ${color1}, ${color2})`;
             }
+
+            // Dynamic gradient name based on colors
+            const name = colors.map((hex) => rgbToName(hexToRgb(hex))).join(" to ");
+
+            return { gradient, name };
         });
+
         setGradients(newGradients);
     }, [num, type]);
 
@@ -73,9 +79,10 @@ export default function GradientGenerator() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {gradients.map((gradient, index) => (
-                        <GradientCard key={index} gradient={gradient} />
+                    {gradients.map((gradientObj, index) => (
+                        <GradientCard key={index} gradient={gradientObj} />
                     ))}
+
                 </div>
             </div>
         </div>
